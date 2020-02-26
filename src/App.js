@@ -16,6 +16,26 @@ import UserContextComponents from './components/ComponetPai';
 import Toolbar from './hooksContext/Toolbar';
 import { ThemeContext, themes } from './hooksContext/Context';
 
+import HookReduceCountOne from './hooksReducer/CountOne';
+import HookReduceCountTwo from './hooksReducer/CountTwo';
+import HookReduceCountTree from './hooksReducer/CountTree';
+import ReduceWithContext from './hooksReducer/ReduceWithContext';
+import ReduceWithFetch from './hooksReducer/ReducerWithFetch';
+import ReduceWithFetchTwo from './hooksReducer/ReducerWithFetchTwo';
+
+import ParentComponent from './hooksCallback/parentComponent';
+
+import Counter from './hooksMemo/Counter';
+
+import FocusInput from './hooksUseRef/focusInput';
+import HookTimer from './hooksUseRef/HookTime';
+
+import DocTitleOne from './CustomHokks/DocTitleOne';
+import DocTitleTwo from './CustomHokks/DocTitleTwo';
+import CounterOne from './CustomHokks/CounterOne';
+import CounterTwo from './CustomHokks/CounterTwo';
+import CustomHook from './CustomHokks/customHook';
+
 function App() {
 	return (
 		<div className='App'>
@@ -40,6 +60,29 @@ function App() {
 			</ThemeContext.Provider>
 			<hr />
 			<h1>useReducer</h1>
+			<HookReduceCountOne />
+			<HookReduceCountTwo />
+			<HookReduceCountTree />
+			<ReduceWithContext />
+			<ReduceWithFetch />
+			<ReduceWithFetchTwo />
+			<hr />
+			<h1>useCallback</h1>
+			<ParentComponent />
+			<hr />
+			<h1>useMemo</h1>
+			<Counter />
+			<hr />
+			<h1>useRef</h1>
+			<FocusInput />
+			<HookTimer />
+			<hr />
+			<h1>Custom Hooks</h1>
+			<DocTitleOne />
+			<DocTitleTwo />
+			<CounterOne />
+			<CounterTwo />
+			<CustomHook />
 		</div>
 	);
 }
